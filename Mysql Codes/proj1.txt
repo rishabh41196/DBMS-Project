@@ -1,0 +1,65 @@
+create table state
+(
+s_no int(10) not null,
+s_name varchar(255),
+PRIMARY KEY (s_no));
+
+
+create table constituency
+(
+con_no int(50) not null,
+con_name varchar(255),
+s_no int(20),
+primary key(con_no),
+FOREIGN KEY (s_no) REFERENCES state(s_no),
+primary key (con_no));
+
+
+create table party 
+(
+p_no int(20) primary key ,
+p_name varchar(255),
+p_symbol varchar(255),
+p_leader_name varchar(255));
+
+
+create table voter_id
+(
+e_no int(20) not null,
+name varchar(255),
+sex varchar(255),
+dob date,
+address varchar(255),
+con_no int(20),
+primary key(e_no),
+FOREIGN KEY (con_no) REFERENCES constituency(con_no));
+
+create table candidate 
+(
+cand_no int(20) primary key ,
+cand_eno int(20),
+cand_details varchar(255),
+p_no int(20),
+con_no  int(20),
+foreign key (p_no) references party (p_no),
+foreign key (con_no) references constituency (con_no)
+foreign key (cand_eno) references voter_id (e_no));
+
+
+create table voter_list
+(
+e_no int(20) not null,
+otp int(20),
+status int(20)
+primary key(e_no),
+foreign key (e_no) references voter_id (e_no));
+
+
+create table result
+(
+no_of_votes int(20),
+con_no int(20),
+can_no int(20),
+FOREIGN KEY (con_no) REFERENCES constituency(con_no),
+FOREIGN KEY (can_no) REFERENCES state(can_no));
+
