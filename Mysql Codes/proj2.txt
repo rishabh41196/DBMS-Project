@@ -1,0 +1,38 @@
+insert into state values(1,'Delhi');
+
+insert into state values(2,'UP');
+
+insert into state values(3,'Bihar');
+
+insert into state values(4,'Punjab');
+
+
+------------------------------------------------------------------------------------------
+insert into party values(101,'Congress','hand','Indira Gandhi' );
+
+insert into party values(102,'BJP','Lotus','Narendra Modi' );
+
+insert into party values(103,'AAP','Broom','Arvind Kejriwal' );
+
+---------------------------------------------------------------------------------------------
+insert into constituency values(11,'Laxmi Nagar',1);
+
+insert into constituency values(12,'Mathura',2);
+
+insert into constituency values(13,'Mayur Vihar',1);
+
+insert into constituency values(14,'Agra',2);
+
+insert into constituency values(15,'Malviya Nagar',1);
+
+insert into constituency values(16,'Patna',3);
+
+insert into constituency values(17,'Hauz Khaas',1);
+
+insert into constituency values(18,'Gurdaspur',4);
+
+insert into constituency values(19,'Saket',1);
+
+insert into constituency values(20,'Amritsar',4);
+
+--------------------------------------------------------------------------------------------
